@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WOM</title>
+</head>
+
+<body>
+    <h1 align="center">WOM</h1>
+    <span>MY name is ....</span><br><br>
+    <button onclick="fun1()">Click to Open</button><br><br>
+    <button onclick="setTimeout(fun, 3000)">Try it for setTimeout</button>
+    <script>
+        //WOM
+        alert("Be carefull while giving the answers");
+        var a = prompt("What is your name?");
+        if (confirm("Are you sure?")) {
+            document.getElementsByTagName("span")[0].innerHTML = "Your name is " + a;
+        }
+        else {
+            document.getElementsByTagName("span")[0].innerHTML = "Sorry! You were not sure about your name.";
+        }
+        function fun() {
+            alert('Thank you for your time :)');
+        }
+        function fun1() {
+            open("http://www.javapoint.com");
+        }
+    </script>
+</body>
+
+</html>
