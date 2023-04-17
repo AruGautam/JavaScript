@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var date_diff_indays = function (date1, date2) 
+        {
+            dt1 = new Date(date1);
+            dt2 = new Date(date2);
+            return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate())) / (1000 * 60 * 60 * 24));
+        }
+        document.write(date_diff_indays('04/02/2014', '11/04/2014'));
+        document.write("\n");
+        // document.write(date_diff_indays('12/02/2014', '11/04/2014'));
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title></title>
+</head>
+<body>
+    <script>
+        var birthday = new Date(2002, 8, 2);
+        var today = new Date();
+        birthday.setFullYear(today.getFullYear());
+        if (today > birthday) {
+            birthday.setFullYear(today.getFullYear() + 1);
+        }
+        document.write(Math.floor((birthday - today) / (1000 * 60 * 60 * 24))+' days left.');
+    </script>
+</body>
+</html>
+
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>Write a JavaScript program to calculate days left until next Christmas</title>
+</head>
+<body>
+    <script>
+        today = new Date();
+        var cmas = new Date(today.getFullYear(), 11, 25);
+        if (today.getMonth() == 11 && today.getDate() > 25) {
+            cmas.setFullYear(cmas.getFullYear() + 1);
+        }
+        //var one_day = 1000 * 60 * 60 * 24;
+        document.write(Math.floor((cmas.getTime() - today.getTime()) / ( 1000 * 60 * 60 * 24)) +" days left until Christmas");
+    </script>
+</body>
+</html>
